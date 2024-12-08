@@ -1,0 +1,76 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Jan 17, 2023 at 09:09 AM
+-- Server version: 10.3.37-MariaDB-log-cll-lve
+-- PHP Version: 7.4.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `polwel_saadat`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `basics`
+--
+
+CREATE TABLE `basics` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `company_name` varchar(255) NOT NULL,
+  `company_email` varchar(255) DEFAULT NULL,
+  `address` varchar(255) NOT NULL,
+  `mobile_no` varchar(255) NOT NULL,
+  `logo` varchar(255) NOT NULL,
+  `facebook` varchar(255) NOT NULL,
+  `twitter` varchar(255) NOT NULL,
+  `instragram` varchar(255) NOT NULL,
+  `skype` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `basics`
+--
+
+INSERT INTO `basics` (`id`, `company_name`, `company_email`, `address`, `mobile_no`, `logo`, `facebook`, `twitter`, `instragram`, `skype`, `created_at`, `updated_at`) VALUES
+(1, 'Govt. Saadat College', 'saadat@gmail.com', '<p>P.O.--Karatia, Post Code--1903.</p><p>\r\n\r\nP.S.--Tangail Sadar, District-Tangail.</p>', '0921-62559', '1673791577.png', 'https://www.facebook.com', 'https://www.twitter.com', '0921-62559', 'https://www.skype.com', '2022-12-02 01:44:04', '2023-01-15 19:06:17');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `basics`
+--
+ALTER TABLE `basics`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `basics`
+--
+ALTER TABLE `basics`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
